@@ -66,6 +66,10 @@ font-weight: 900;
   padding: 20px;
 }
 
+.flex-items-team {
+  display: flex;
+}
+
 /* Flex Columns */
 .flex-columns.flex-reverse .row {
   flex-direction: row-reverse;
@@ -86,7 +90,8 @@ font-weight: 900;
 }
 
 .flex-columns .column .column-1,
-.flex-columns .column .column-2 {
+.flex-columns .column .column-2,
+.flex-columns .column .column-3 {
   height: 100%;
 }
 
