@@ -11,7 +11,7 @@
 </head>
 <body id="home">
   <header class="hero">
-  <div id="navbar" class="navbar">
+  <div id="navbar" class="navbar top">
     <h1 class="logo">
       <img class="main_icon_edit" src="./images/main_icon_edit.png" alt="#">
       <span class="logo-text">
@@ -34,7 +34,7 @@
     <p>Providing world class forensic blockchain and cryptocurrency management</p>
     <a href="#about" class="btn"><i class="fas fa-chevron-circle-right"></i> Read More</a>
   </div>
-</header>
+  </header>
 
   <main>
     <!-- About :Icons -->
@@ -139,28 +139,111 @@
     <section id="team" class="team section-padding">
       <header class="section-header">
         <h4>Who we are</h4>
-        <h2>Our professional team</h2>
+        <h2>Our Professional Team</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laboriosam repellendus reprehenderit inventore quasi ea sed, soluta nostrum!</p>
       </header>
-      <div class="flex-items-team">
+      <div class="flex-items team">
         <div>
           <img src="./images/team/person1.jpg" alt="">
-          <!-- <h4>Bjorg Kirnfeldjosohn</h4> -->
+          <h4>Bjorg Kirnfeldjosohn</h4>
           <p>CEO</p>
         </div>
         <div>
           <img src="./images/team/person2.jpg" alt="">
-          <!-- <h4>Carlsbad Blankenfleider</h4> -->
+          <h4>Carlsbad Blankenfleider</h4>
           <p>CTO</p>
         </div>
         <div>
           <img src="./images/team/person3.jpg" alt="">
-          <!-- <h4>Matilda Oshken-Deriffelous</h4> -->
+          <h4>Matilda Oshken-Deriffelous</h4>
           <p>CMO</p>
         </div>
       </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact" class="contact flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="./images/home/contact.jpg" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-light">
+            <h2>Request Callback</h2>
+            <form action="" class="callback-form">
+              <div class="form-control">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Enter name">
+              </div>
+              <div class="form-control">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Enter e-mail">
+              </div>
+              <div class="form-control">
+                <label for="phone"></label>
+                <input type="text" name="phone" id="phone" placeholder="Enter phone">
+              </div>
+              <input type="submit" value="Send" id="submit" class="btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2022 - Blo&#231kLedger</p>
+  </footer>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+  </script>
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function() {
+      if(window.pageYOffset > 300) {
+        navbar.classList.remove('top');
+        if(!scrolled) {
+          navbar.style.transform = 'translateY(-70px)'
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+
+    $('#navbar a, .btn').on('click', function (e) {
+      if (this.hash !== ;) {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top-100,
+          },
+          800
+        );
+      }
+    });
+
+  </script>
 </body> 
 </html>
