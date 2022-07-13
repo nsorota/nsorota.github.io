@@ -115,7 +115,9 @@ font-weight: 900;
   align-items: flex-end;
   justify-content: center;
   padding: 30px;
+  text-align: right;
 }
+
 
 .flex-columns h2 {
   font-size: 40px;
